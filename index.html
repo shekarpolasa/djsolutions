@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DJ Solutions | Software Consulting</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+    h2{
+        margin-top: 20px;
+    }
+    .hero {
+      background: #0d6efd;
+      color: white;
+      padding: 160px 0;
+      text-align: center;
+    }
+    .navbar-custom {
+      background-color: #0d6efd;
+    }
+    .navbar-nav .nav-link {
+      color: white !important;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #ffc107 !important;
+    }
+    .navbar .navbar-toggler{
+        border: none;
+    }
+    .section-padding {
+      padding: 60px 0;
+    }
+    footer {
+      background: #212529;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .form-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .address-box {
+      min-width: 250px;
+    }
+    .btn-rounded {
+      border-radius: 30px;
+    }
+
+    .btn-light {
+      color: #444;
+      background-color: #ffc107;
+      border: none;
+      transition: all 0.3s ease;
+      /* border: 2px solid #0d6efd; */
+    }
+    .btn-light:hover {
+        background-color: #fff;
+      /* color: white; */
+      /* background-color: #0d6efd; */
+    }
+    .service-card {
+      /* border: 2px solid #ddd; */
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    .service-card:hover {
+      border-color: #0d6efd;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+      transform: scale(1.02);
+    }
+    @media (max-width: 768px) {
+      .form-section {
+        flex-direction: column;
+      }
+      .address-box {
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">DJ Solutions</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4">Welcome to DJ Solutions</h1>
+      <p class="lead">Your trusted partner for software consulting and custom development.</p>
+      <a href="#contact" class="btn btn-light btn-rounded mt-4">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <h2 class="text-center">About Us</h2>
+      <p class="lead text-center mt-3">At DJ Solutions, we specialize in providing customized software solutions for businesses of all sizes.</p>
+      <div class="row mt-4">
+        <!-- Who We Are Card -->
+        <div class="col-md-6 mb-4">
+          <div class="card service-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Who We Are</h5>
+              <ul>
+                <li>Experienced team of software engineers, architects, and consultants.</li>
+                <li>Over 10 years of industry experience.</li>
+                <li>Dedicated to solving real-world business problems using technology.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- What Sets Us Apart Card -->
+        <div class="col-md-6 mb-4">
+          <div class="card service-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">What Sets Us Apart</h5>
+              <ul>
+                <li>Client-first approach with clear communication and transparency.</li>
+                <li>Agile methodology for faster delivery and flexibility.</li>
+                <li>Focus on scalable and maintainable solutions.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Sponsorship Information -->
+      <div class="mt-5">
+        <p class="lead text-center">In addition to our software services, we proudly sponsor cricket teams such as ITree and DJ Warriors, supporting local sports and fostering community engagement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section-padding bg-light">
+    <div class="container text-center">
+      <h2>Our Services</h2>
+      <div class="row mt-4">
+        <!-- Service 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card service-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Custom Software Development</h5>
+              <p class="card-text">We build scalable applications tailored to your unique business requirements.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Service 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card service-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Cloud & DevOps</h5>
+              <p class="card-text">Modernize infrastructure with cloud migration, CI/CD pipelines, and automation.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Service 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card service-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">IT Consulting</h5>
+              <p class="card-text">Strategic advisory to align your IT with business goals and future growth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <h2 class="text-center">Contact Us</h2>
+      <div class="form-section mt-4">
+        <div class="col-md-6">
+          <form action="#" method="post">
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea name="message" id="message" class="form-control" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-rounded">Send Message</button>
+          </form>
+        </div>
+        <div class="col-md-5 address-box">
+          <h5>Our Office</h5>
+          <p>DJ Solutions<br>Dhananja Madhukuri<br>London E62DU</p>
+          <a href="https://www.google.com/maps?q=123+Innovation+Street,+San+Francisco,+CA" target="_blank" class="btn btn-outline-primary btn-rounded btn-sm">View on Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 DJ Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
