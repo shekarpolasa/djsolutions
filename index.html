@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,92 +8,164 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="favicon.png" rel="icon" type="image/png">
   <style>
+    :root {
+      --primary-color: #ff7c00;
+      --secondary-color: #ffc107;
+      --bs-primary: var(--primary-color);
+    }
+
     body {
       scroll-behavior: smooth;
     }
-    h2{
-        margin-top: 20px;
+
+    h2 {
+      margin-top: 20px;
+      color: var(--primary-color)
     }
+
     .hero {
-      background: #0d6efd;
+      background: var(--primary-color);
       color: white;
-      padding: 160px 0;
+      padding: 100px 0;
+      padding-bottom: 40px;
       text-align: center;
     }
-    .navbar-custom {
-      background-color: #0d6efd;
+
+    .carousel-inner img {
+      object-fit: contain;
+      height: 500px;
     }
+
+    .navbar-custom {
+      background-color: var(--primary-color);
+    }
+
     .navbar-nav .nav-link {
       color: white !important;
     }
-    .navbar-nav .nav-link:hover {
+
+    /* .navbar-nav .nav-link:hover {
       color: #ffc107 !important;
+    } */
+    .navbar .navbar-toggler {
+      border: none;
     }
-    .navbar .navbar-toggler{
-        border: none;
-    }
+
     .section-padding {
       padding: 60px 0;
     }
+
+    .section-about {
+      background: #f8cfa7;
+    }
+
     footer {
       background: #212529;
       color: white;
       padding: 20px 0;
       text-align: center;
     }
+
     .form-section {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 20px;
     }
+
+    .form-label {
+      color: #666;
+    }
+
+    .form-control:focus {
+      border-color: #666;
+      box-shadow: 0 0 0 .15rem rgba(0, 0, 0, .25);
+    }
+
     .address-box {
       min-width: 250px;
     }
+
     .btn-rounded {
       border-radius: 30px;
     }
 
     .btn-light {
       color: #444;
-      background-color: #ffc107;
+      background-color: #ffca8e;
       border: none;
       transition: all 0.3s ease;
       /* border: 2px solid #0d6efd; */
     }
+
     .btn-light:hover {
-        background-color: #fff;
+      background-color: #fff;
       /* color: white; */
       /* background-color: #0d6efd; */
     }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:focus-visible {
+      background-color: #be5c00 !important;
+      border-color: #be5c00 !important;
+      box-shadow: none !important;
+    }
+
+    .btn-outline-primary {
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-primary:hover,
+    .btn-outline-primary:active,
+    .btn-outline-primary:focus-visible {
+      background-color: #be5c00;
+      border-color: #be5c00;
+      box-shadow: none !important;
+    }
+
     .service-card {
       /* border: 2px solid #ddd; */
+      background: transparent;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
     }
+
     .service-card:hover {
-      border-color: #0d6efd;
+      border-color: var(--primary-color);
       box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
       transform: scale(1.02);
     }
+
     @media (max-width: 768px) {
       .form-section {
         flex-direction: column;
       }
+
       .address-box {
         min-width: auto;
       }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top shadow-sm">
     <div class="container">
       <a class="navbar-brand" href="#">DJ Solutions</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -110,15 +183,44 @@
     <div class="container">
       <h1 class="display-4">Welcome to DJ Solutions</h1>
       <p class="lead">Your trusted partner for software consulting and custom development.</p>
-      <a href="#contact" class="btn btn-light btn-rounded mt-4">Get in Touch</a>
     </div>
+    <!-- Banner Image Carousel -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/banner1.webp" class="d-block w-100" alt="Banner Image 1">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/banner2.jpg" class="d-block w-100" alt="Banner Image 2">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/banner3.jpg" class="d-block w-100" alt="Banner Image 3">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/banner4.jpg" class="d-block w-100" alt="Banner Image 4">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/banner5.jpg" class="d-block w-100" alt="Banner Image 4">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
   </section>
 
   <!-- About Section -->
-  <section id="about" class="section-padding">
+  <section id="about" class="section-about section-padding">
     <div class="container">
       <h2 class="text-center">About Us</h2>
-      <p class="lead text-center mt-3">At DJ Solutions, we specialize in providing customized software solutions for businesses of all sizes.</p>
+      <p class="lead text-center mt-3">At DJ Solutions, we specialize in providing customized software solutions for
+        businesses of all sizes.</p>
       <div class="row mt-4">
         <!-- Who We Are Card -->
         <div class="col-md-6 mb-4">
@@ -149,7 +251,8 @@
       </div>
       <!-- Sponsorship Information -->
       <div class="mt-5">
-        <p class="lead text-center">In addition to our software services, we proudly sponsor cricket teams such as ITree and DJ Warriors, supporting local sports and fostering community engagement.</p>
+        <p class="lead text-center">In addition to our software services, we proudly sponsor cricket teams such as ITree
+          and DJ Warriors, supporting local sports and fostering community engagement.</p>
       </div>
     </div>
   </section>
@@ -186,9 +289,43 @@
             </div>
           </div>
         </div>
+
+        <!-- New Service 4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card service-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Software Testing</h5>
+              <p class="card-text">Comprehensive testing services to ensure your applications perform flawlessly.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- New Service 5 -->
+        <div class="col-md-4 mb-4">
+          <div class="card service-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Data Science</h5>
+              <p class="card-text">Utilizing data to uncover insights, predict trends, and optimize business strategies.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- New Service 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="card service-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Cybersecurity</h5>
+              <p class="card-text">Protect your business with robust security solutions and threat mitigation
+                strategies.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
+
 
   <!-- Contact Section -->
   <section id="contact" class="section-padding">
@@ -214,8 +351,15 @@
         </div>
         <div class="col-md-5 address-box">
           <h5>Our Office</h5>
-          <p>DJ Solutions<br>Dhananja Madhukuri<br>London E62DU</p>
-          <a href="https://www.google.com/maps?q=123+Innovation+Street,+San+Francisco,+CA" target="_blank" class="btn btn-outline-primary btn-rounded btn-sm">View on Google Maps</a>
+          <p>DJ Solutions<br>Dhananja Madhukuri<br>Chadwell Ln, London, UK</p>
+          <a href="https://maps.app.goo.gl/uBuUc5QNxrwdXrR76" target="_blank"
+            class="btn btn-outline-primary btn-rounded btn-sm">View on Google Maps</a>
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d154.98981370712391!2d0.12026914834877729!3d51.57122125127196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a5e707045521%3A0x6619657c3dda829c!2sMOBILE%20365%20LTD!5e0!3m2!1sen!2sin!4v1747042567122!5m2!1sen!2sin"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </div>
     </div>
@@ -247,4 +391,5 @@
     });
   </script>
 </body>
+
 </html>
